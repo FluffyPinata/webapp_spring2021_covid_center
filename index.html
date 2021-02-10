@@ -175,6 +175,66 @@
 							</select>
 						</p>
 					</fieldset>
+					<fieldset>
+						<label>Part 3: Other Questions</label>
+						<p>
+							<label for="ddContact">
+								<span>Have you had contact (within 6 feet for > 15 minutes), or caring for someone who is diagnosed with COVID-19 in the last 14 days and were not wearing proper personal protective equipment? </span>
+								<strong><abbr title=required>*</abbr></strong>
+							</label>
+							<select id="ddContact" name="ddContact">
+								<option value="No" selected>No</option>
+								<option value="Yes">Yes</option>
+							</select>
+						</p>
+						<p>
+							<label for="ddDiagnosis">
+								<span>Have you had a diagnosis of COVID-19 within the last 10 days? </span>
+								<strong><abbr title=required>*</abbr></strong>
+							</label>
+							<select id="ddDiagnosis" name="ddDiagnosis">
+								<option value="No" selected>No</option>
+								<option value="Yes">Yes</option>
+							</select>
+						</p>
+						<p>
+							<fieldset>
+								<label for="ddCountry">
+									<span>Have you travelled to any country within the last 14 days? </span>
+									<strong><abbr title=required>*</abbr></strong>
+								</label>
+								<select id="ddCountry" name="ddCountry">
+									<option value="No" selected>No</option>
+									<option value="Yes">Yes</option>
+								</select>
+								<br>
+								<div>
+									<label for="txtCountry">
+										<span>Which countries? (Enter as comma separated list) </span>
+										<strong><abbr title=required>*</abbr></strong>
+									</label>
+									<input type="text" id="txtCountry" name="txtCountry" required>
+								</div>
+							</fieldset>
+						</p>
+						<p>
+							<label for="ddSocial">
+								<span>Have you socialized with a group of 6 or more people within the last 14 days? </span>
+								<strong><abbr title=required>*</abbr></strong>
+							</label>
+							<select id="ddSocial" name="ddSocial">
+								<option value="No" selected>No</option>
+								<option value="Yes">Yes</option>
+							</select>
+						</p>
+						<p>
+							<label for="txtTemp">
+								<span>Current Temperature: </span>
+								<strong><abbr title="required">*</abbr></strong>
+							</label>
+							<input type="text" id="txtTemp" name="txtTemp" required>
+						</p>
+					</fieldset>
 					<p>
 						<buttom type="submit">Submit</buttom>
 						<button type="reset">Reset</button>
