@@ -12,6 +12,7 @@
 			<article>
 				<form>
 					<fieldset>
+						<legend>Patient Information</legend>
 						<p>
 							<label for="txtFirstName">
 								<span>First name: </span>
@@ -37,21 +38,33 @@
 							<input type="radio" id="rbOther" name="gender" value="other">
 							<label for="rbOther">Other</label>
 						</p>
-
 						<p>
 							<label for="txtTel">Telephone: </label>
 							<input type="tel" id="txtTel" name="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 						</p>
-
 						<p>
-							<label for="txtEmail">Email: </label>
-							<input type="email" id="txtEmail" name="txtEmail">
+							<label for="txtEmail">
+								<span>Email: </span>
+								<strong><abbr title="required">*</abbr></strong>
+							</label>
+							<input type="email" id="txtEmail" name="txtEmail" required>
 						</p>
-
 						<p>
-							<buttom type="submit">Submit</buttom>
+							<label for="txtAddress">Address: </label>
+							<input type="text" id="txtAddress" name="txtAddress">
+						</p>
+						<p>
+							<label for="txtDOB">
+								<span>Date of Birth: </span>
+								<strong><abbr title="required">*</abbr></strong>
+							</label>
+							<input type="date" id="txtDOB" name="txtDOB" required>
 						</p>
 					</fieldset>
+					<p>
+						<buttom type="submit">Submit</buttom>
+						<button type="reset">Reset</button>
+					</p>
 				</form>
 			</article>
 		</section>
