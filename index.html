@@ -7,7 +7,8 @@
 	<body>
 		<header>
 			<h1>Welcome to Covid Assessment Website</h1>
-			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			<link rel="stylesheet" href="styles/style.css"> 
 		</header>
 		<section>
 			<h2>Please fill out this form:</h2>
@@ -254,13 +255,13 @@
 									<span>Have you travelled to any country within the last 14 days? </span>
 								</label>
 								<div>
-									<select id="ddCountry" name="ddCountry" class="form-control">
+									<select id="ddCountry" name="ddCountry" class="form-control" onchange="updateCountryView()">
 										<option value="No" selected>No</option>
 										<option value="Yes">Yes</option>
 									</select>
 								</div>
 						</div>
-						<div class="row form-group">
+						<div id="divCountry" class="row form-group invisible">
 								<label for="txtCountry" class="col-sm-2 col-form-label">
 										<span>Which countries? (Enter as comma separated list) </span>
 									</label>

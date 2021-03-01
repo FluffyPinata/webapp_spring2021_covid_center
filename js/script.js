@@ -29,3 +29,15 @@ function multiply(x, y) {
 function power(x, y) {
 	return Math.pow(x, y);
 }
+
+function updateCountryView() {
+	var ddCountry = document.getElementById("ddCountry");
+	var divCountry = document.getElementById("divCountry");
+
+	if (ddCountry.value == "Yes") {
+		divCountry.classList.remove("invisible");
+	} else {
+		divCountry.classList.add("invisible");
+	}
+}
+
