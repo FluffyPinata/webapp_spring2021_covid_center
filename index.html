@@ -19,7 +19,7 @@
 				console.log(doOperation(5, 10, power));
 			</script>
 			<article>
-				<form>
+				<form onsubmit="return validateForm()" id="mainForm" novalidate>
 					<fieldset class="border">
 						<legend class="w-auto">Part 1: Patient Information</legend>
 						<div class="form-group row">
@@ -96,6 +96,7 @@
 							</label>
 							<div class="col-sm-10">
 								<input type="date" id="txtDOB" name="txtDOB" required class="form-control" placeholder="mm/dd/yyyy">
+								<div id="divDoBError" class="col-sm-5 invisible errorMessage"></div>
 							</div>
 						</div>
 					</fieldset>

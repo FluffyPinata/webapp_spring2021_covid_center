@@ -41,3 +41,33 @@ function updateCountryView() {
 	}
 }
 
+function validateForm() {
+
+	var DoB = document.querySelector("#txtDOB");
+	var divDoBError = document.querySelector("#divDoBError");
+	var formIsValid = true;
+	if (DoB.value == "") {
+		divDoBError.classList.remove("invisible");
+		divDoBError.innerHTML = "The Date of Birth cannot be empty.";
+		DoB.classList.add("hasError");
+		formIsValid = false;
+	} else {
+		var DoBDate = new Date(DoB.value);
+		var todayDate = new Date();
+		if (DoBDate >= todayDate) {
+			divDoBError.classList.remove("invisible");
+			divDoBError.innerHTML = "The Date of Birth must be before today's date.";
+			DoB.classList.add("hasError");
+			formIsValid = false;
+		} else {
+			divDoBError.classList.add("invisible");
+			divDoBError.innerHTML = "";
+			DoB.classList.remove("hasError");
+			formIsValid = true;
+		}
+	}
+
+	var ddCountry = document.querySelector("#ddCountry");
+
+	return formIsValid;
+}
